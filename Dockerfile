@@ -14,6 +14,6 @@ RUN npm run build
 
 # image build using previous html that will be served by the nginx server
 FROM nginx
-
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
